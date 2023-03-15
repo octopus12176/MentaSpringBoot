@@ -1,0 +1,15 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    container_name: menta_postgre
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: menta
+      POSTGRES_PASSWORD: menta
+      POSTGRES_DB: menta
+volumes:
+  pgdata:
